@@ -1,12 +1,16 @@
-const sentence = 'hello there from lighthouse labs';
+const sentence = 'wanna play a game?';
+let array = sentence.split("");
+let delay = 0;
 
-const typeWriter  = string => {
-  for (let x = 0; x < string.length; x++){
-    setTimeout(() => {
-      process.stdout.write(string[x]);
-    }, 1000);
-  };
+for (let x = 0; x < array.length; x++){
+  setTimeout(() => {
+    process.stdout.write(array[x]);
+  }, delay);
+  delay += 50;
 };
 
-typeWriter(sentence);
 
+setTimeout(() => {
+  process.stdout.write('\n');
+
+}, 3000);
